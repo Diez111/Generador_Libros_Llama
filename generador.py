@@ -38,7 +38,7 @@ def generate_story_blueprint(theme):
             "content": (
                 "Eres un narrador profesional. Crea un blueprint en formato JSON que incluya una descripción detallada de los personajes principales, "
                 "eventos clave y el mundo en el que se desarrolla la historia. Registra todos los eventos importantes para que la IA pueda consultarlos y mantener la coherencia. "
-                "No incluyas el blueprint en la narrativa final."
+                "No incluyas el blueprint en la narrativa final y no debes repetir frases o oraciones al inicio, debes cuidar de no ser repetitivo con las palabras o oraciones que utilizas."
             )
         },
         {
@@ -85,7 +85,7 @@ def generate_chapter_segment(chapter_number, total_chapters, blueprint, word_goa
         base_instruction = (
             f"Genera el capítulo {chapter_number} de la historia utilizando el siguiente blueprint. "
             f"El capítulo debe tener AL MENOS {word_goal} palabras en total. "
-            "No repitas ideas ni insertes encabezados o listas de eventos en la narrativa. "
+            "No repitas ideas ni insertes encabezados o listas de eventos en la narrativa, no debes repetir oraciones ni palabras, debes usar un vocabulario variado. "
             "Mantén un tono uniforme y evita redundancias."
         )
         if chapter_number in (total_chapters, total_chapters - 1):
